@@ -27,7 +27,7 @@ func (k msgServer) LiquidateLoan(goCtx context.Context, msg *types.MsgLiquidateL
 	lender, _ := sdk.AccAddressFromBech32(loan.Lender)
 	collateral, _ := sdk.ParseCoinsNormalized(loan.Collateral)
 
-	deadline, err := strconv.ParseInt(loan.Deadline,10,64)
+	deadline, err := strconv.ParseInt(loan.Deadline, 10, 64)
 	if err != nil {
 		panic(err)
 	}
